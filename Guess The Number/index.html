@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎯 Guess the Number</h1>
+
+        <input type="number" id="userGuess" placeholder="Enter your guess (1-100)" min="1" max="100">
+        <br>
+        <button onclick="checkGuess()">Submit Guess</button>
+        <button onclick="resetGame()">Play Again</button>
+        <button onclick="restartMusic()">Restart Music 🎵</button>
+
+        <div class="timer" id="timer">Time Left: 60s</div>
+        <div class="message" id="message"></div>
+        <div class="score" id="score"></div>
+        <div class="high-score" id="highScore">🏆 Best Score: 0</div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" src="https://www.bensound.com/bensound-music/bensound-buddy.mp3" loop></audio>
+    <audio id="winSound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3"></audio>
+    <audio id="wrongSound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3"></audio>
+
+    <!-- Canvas for Confetti -->
+    <canvas id="confetti"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
